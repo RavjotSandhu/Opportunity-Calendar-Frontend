@@ -10,10 +10,9 @@ on:
     types: created
 
 jobs:
-  add_label:
+  label: GSSOC21
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v2
-        
+      - uses: actions/labeler@v2     
         with:
-          labels: GSSOC21
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
