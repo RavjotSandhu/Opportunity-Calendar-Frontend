@@ -5,12 +5,14 @@
 # file with configuration.  For more information, see:
 name: Add Label
 
-on: [issue]
+on: 
+  issue:
+    type: ['created']
 
 jobs:
   label: GSSOC21
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v2     
+        uses: actions/labeler@v2     
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
